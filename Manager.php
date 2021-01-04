@@ -9,6 +9,6 @@ class Manager{
 
     public function update($index,$data)
     {
-        
+        self::$students[$index] = $data;
     }
 }
