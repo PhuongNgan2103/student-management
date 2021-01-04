@@ -1,9 +1,9 @@
 <?php
 class Manager{
-    public static $student = [];
+    public static $students = [];
 
     public function add($student)
     {
-
+        self::$students = $student;
     }
 }
