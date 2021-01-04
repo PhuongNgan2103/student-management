@@ -11,4 +11,9 @@ class Manager{
     {
         self::$students[$index] = $data;
     }
+
+    public function read()
+    {
+
+    }
 }
