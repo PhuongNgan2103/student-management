@@ -21,4 +21,9 @@ class Manager{
     {
         array_splice(self::$students,$index,1);
     }
+
+    public function sortAZ()
+    {
+
+    }
 }
