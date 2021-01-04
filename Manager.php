@@ -31,4 +31,9 @@ class Manager{
     {
         rsort(self::$students);
     }
+
+    public function search()
+    {
+        
+    }
 }
