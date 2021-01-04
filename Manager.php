@@ -12,7 +12,12 @@ class Manager{
         self::$students[$index] = $data;
     }
 
-    public function read()
+    public function read($index)
+    {
+        return self::$students[$index];
+    }
+
+    public function delete($index)
     {
 
     }
