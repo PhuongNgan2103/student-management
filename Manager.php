@@ -6,4 +6,9 @@ class Manager{
     {
         self::$students = $student;
     }
+
+    public function update($index,$data)
+    {
+        
+    }
 }
