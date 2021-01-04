@@ -1,5 +1,6 @@
 <?php
-
+include_once "Student.php";
+include_once "Manager.php";
 ?>
 <!doctype html>
 <html lang="en">
