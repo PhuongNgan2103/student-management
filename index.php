@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,14 +13,23 @@
 </head>
 <body>
 <table>
+    <caption id="caption"><h1>Danh sách sinh viên</h1></caption>
+
+        <form method="post">
+        Tìm kiếm:<input type="text" name="tìm kiếm sinh viên" placeholder="Tìm kiếm sinh viên" id="search">
+            <button type="submit" id="button_search">search</button>
+        </form>
+    <caption><a href="Add.php"><button id="button_add">Thêm</button></a></caption>
     <tr>
         <th>STT</th>
         <th>Họ và tên</th>
         <th>Ngày sinh</th>
         <th>Giới tính</th>
-        <th>Ghi chú</th>
+        <th>Quê quán</th>
+        <th>Hành động</th>
     </tr>
 </table>
 </body>
 </html>
 <?php
+
