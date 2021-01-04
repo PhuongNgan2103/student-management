@@ -28,6 +28,14 @@
         <th>Quê quán</th>
         <th>Hành động</th>
     </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a href="Edit.php"><button type="submit">Sửa</button></a></td>
+    </tr>
 </table>
 </body>
 </html>
