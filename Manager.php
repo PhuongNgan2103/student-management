@@ -47,4 +47,11 @@ class Manager{
         $dataJson = json_encode($data);
         file_put_contents(self::FILE_DATA_NAME,$dataJson);
     }
+
+
+    public function arrayToStudent($array)
+    {
+        return new Student($array[0], $array[1], $array[2], $array[3], $array[4], $array[5]);
+    }
+
 }
