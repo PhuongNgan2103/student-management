@@ -24,6 +24,6 @@ class Manager{
 
     public function sortAZ()
     {
-
+        sort(self::$students);
     }
 }
