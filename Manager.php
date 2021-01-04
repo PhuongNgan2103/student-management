@@ -19,6 +19,6 @@ class Manager{
 
     public function delete($index)
     {
-
+        array_splice(self::$students,$index,1);
     }
 }
