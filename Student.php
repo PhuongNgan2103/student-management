@@ -122,5 +122,8 @@ class Student{
         $this->action = $action;
     }
 
+ public function toArray()
+    {
 
+}
 }
