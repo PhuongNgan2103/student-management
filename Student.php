@@ -1,5 +1,7 @@
 <?php
-class Student{
+
+class Student
+{
     protected $order;
     protected $fullName;
     protected $dateOfBirth;
@@ -122,8 +124,8 @@ class Student{
         $this->action = $action;
     }
 
- public function toArray()
+    public function toArray()
     {
-
-}
+        return [$this->action, $this->dateOfBirth, $this->fullName, $this->gender];
+    }
 }
