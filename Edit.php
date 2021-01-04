@@ -16,7 +16,7 @@
         Ngày sinh :<input type="date" name="ngày sinh" placeholder="Nhập ngày sinh" required>
         Giới tính :<input type="text" name="giới tính" placeholder="Giới tính" required>
         Quê quán :<input type="text" name="quê quán" placeholder="Quê quán" required>
-        <button type="submit">Thêm</button>
+        <button type="submit">Sửa</button>
     </fieldset>
 </form>
 </body>

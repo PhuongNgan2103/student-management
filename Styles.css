@@ -5,7 +5,7 @@ table{
     border-collapse: collapse;
     background-color: cadetblue;
 }
-th{
+th,td{
     border: black solid;
 }
 #search{
