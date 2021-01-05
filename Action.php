@@ -13,5 +13,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $homeTown = $_POST['homeTown'];
     $action = $_POST['action'];
 
+        switch ($action){
+            case 'create':
+                $student = new Student($oder,$fullName,$dateOfBirth,$gender,$homeTown,$action);
+                $manager->add($student);
+                unset($student);
+                break;
+            case 'update':
 
+                break;
+            case 'delete':
+                $index = $_POST['index'];
+                $manager->delete($index);
+                break;
+        }
+        header('location: index.php');
 }
