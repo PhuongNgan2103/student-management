@@ -29,14 +29,31 @@ include_once "Manager.php";
         <th>Quê quán</th>
         <th>Hành động</th>
     </tr>
+<?php if (Manager::$students == null):?>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><a href="Edit.php"><button type="submit">Sửa</button></a></td>
+        <td colspan="7" style="text-align: center"><h3><i>Không có dữ liệu</i></h3></td>
     </tr>
+<?php else:?>
+    <?php foreach (Manager::$students as $key=>$student):?>
+        <tr>
+            <td><?php echo $key?></td>
+            <td><?php echo $student->getOder()?></td>
+            <td><?php echo $student->getFullName()?></td>
+            <td><?php echo $student->getDateOfBirth()?></td>
+            <td><?php echo $student->getGender()?></td>
+            <td><?php echo $student->getHomTOwn()?></td>
+            <td><?php echo $student->getAction()?></td>
+            <td>
+                <form action="Edit.php" method="post" style="display: inline">
+                    <input type="text" name="action" value="edit" hidden="hidden">
+                    <input type="text" name="index" value="<?php echo $key?>" hidden="hidden">
+                    <button type="submit">Sửa</button>
+                </form>
+
+            </td>
+        </tr>
+    <?php endforeach;?>
+<?php endif;?>
 </table>
 </body>
 </html>
