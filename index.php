@@ -29,6 +29,14 @@ include_once "Manager.php";
         <th>Quê quán</th>
         <th>Hành động</th>
     </tr>
+    <script>
+        function clickSubmit(id) {
+            let confirm = window.confirm("Bạn có chắc chắn muốn xóa sinh viên này không !");
+            if (confirm === true) {
+                document.getElementById("btnSubmitDelete" + id).click();
+            }
+        }
+    </script>
 <?php if (Manager::$students == null):?>
     <tr>
         <td colspan="7" style="text-align: center"><h3><i>Không có dữ liệu</i></h3></td>
@@ -49,7 +57,12 @@ include_once "Manager.php";
                     <input type="text" name="index" value="<?php echo $key?>" hidden="hidden">
                     <button type="submit">Sửa</button>
                 </form>
-
+                <form action="Action.php" method="post" style="display: inline">
+                    <input id="inputActionEdit<?php echo $key?>" type="text" name="action" value="delete" hidden="hidden">
+                    <input type="text" name="index" value="<?php echo $key?>" hidden="hidden">
+                    <button id="btnSubmitDelete<?php echo $key?>" hidden="hidden" type="submit"></button>
+                    <button type="button" onclick="clickSubmit('<?php echo $key?>')">Xóa</button>
+            </form>
             </td>
         </tr>
     <?php endforeach;?>
